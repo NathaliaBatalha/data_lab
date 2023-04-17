@@ -1,3 +1,5 @@
+# Exploratory data analysis
+
 
 The **goal of this project** is to learn how to do data exploration. In this case, data from **New York City Yellow Taxis** is used.
 
