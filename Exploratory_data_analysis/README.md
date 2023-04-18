@@ -112,67 +112,71 @@ Create a new dataset that contains all the information for the years: 2019, 2020
 
 Yes, due to the pandemic, the low number of trips in 2020 was expected. In the next year, 2021, when the activities started again, there was a sligthly increase. 
 
-Visualize **how many passengers there are per taxi and per year (%)**.
+**How many passengers there are per taxi and per year (%)**.
 
-Insert second barplot here!!
+![Barplot_years_normalized](images/barplot_normalized.png)
 
-As depicted by the normalized plot, the number of single passenger is high in 2020 and 2021, this is due to the pandemic. The same way that many passengers in a cab (like 5 or 6) is lower during the pandemic.\
+As depicted by the normalized plot, the number of single passenger is high in 2020 and 2021, this is due to the pandemic. The same way that many passengers in a cab (like 5 or 6) is lower during the pandemic.
 
 ## 03. Number of trips
 
-Let's study what changes can be seen if you aggregate the data by hours and days of the week
+What changes can be seen if you aggregate the data by hours and days of the week
 
 These visualizations have to be done for the *pick-up* and *drop-off* columns. 
 
-Insert scatter plots here!!
+![Scatter_trips_perhour](images/scatterplot_tripsperhour.png)
 
-It is observed that overnight the trips number is very low, but starts to increase in the morning rush time. In the rush time at night it gets very high, when people get back home. Then, starts to decrease later night.\
+![Scatter_trips_perdayofweek](images/scatterplot_tripsperdayweek.png)
+
+It is observed that overnight the trips number is very low, but starts to increase in the morning rush time. In the rush time at night it gets very high, when people get back home. Then, starts to decrease later night.
 Regarding days of week:  the comparison between 2019 and the pandemic years 2020 and 2021 is very strong. It is interesting though how the numbers of trips is higher in weekdays compared to weekends. 
 
 
-## 04. Visualize the locations of the trips
+## 04. Locations of the trips
 
-Latitude and longitude were provided for the exercise. This information is saved in *data/geodata/taxi_zones.shp*.
+Latitude and longitude is provided for the exercise. This information is saved in *data/geodata/taxi_zones.shp*.
 
 Use the *pd.merge* function to add the longitude and latitude to the *df* dataframe
 
 
 ## 05. Which are the areas/zones with more pick-up and drop-off?
 
-In this section, you have to visualize the areas where taxis are most used.
-
-The first step is to sort and save in a variable the most common places in the pick-up and drop-off.
+We have to visualize the areas where taxis are most used: sort and save in a variable the most common places in the pick-up and drop-off.
 
 The variables *top_pu* and *top_do* contains a dataframe with columns: 'year', 'PULocationID', and 'count'.
 
 - Print the 5 most frequent zones per year and in each case (pick-up and drop-off).
 - Make a heat map with the most common zones. 
 
-Insert here the heat maps for all years, PU and DO:
+![heatmap2019](images/heatmap2019.png)
 
-**Question: Why do you think the Manhattan area has more trips?**
+![heatmap2020](images/heatmap2020.png)
+
+![heatmap2021](images/heatmap2021.png)
+
+**Why do you think the Manhattan area has more trips?**
 
 Manhatan it is the busiest area in New York.
 
 ## 06. Hospitals
 
-How has the travel destination changed? Are more people going to hospitals?
+**This section is to understand how has the travel destination changed. Are more people going to hospitals?**
 
-The notebook provides a DataFrame with the most important hospitals in New York and their locations.
+- The notebook provides a DataFrame with the most important hospitals in New York and their locations.
 
-Use the latitude and longitude of each hospital and the latitude and longitude of the zone (information in *merge* dataframe) to see the distribution of the hospitals "on the map".
+- Use the latitude and longitude of each hospital and the latitude and longitude of the zone (information in *merge* dataframe) to see the distribution of the hospitals "on the map".
 
-To do this, use a scatter plot. It will be better understood if the points are transparent (parameter *alpha*).
+- Use a scatter plot. It will be better understood if the points are transparent (parameter *alpha*).
 
-Also, remember how the longitude and latitude data have to be plotted in the figure.
+- The longitude and latitude data have to be plotted in the figure.
 
-Then repeat the same scatter plot but separated by years.
+![scatter_hospital2019](images/scatter_hospital2019.png)
 
-- Scatter plots per year:
+![scatter_hospital2020](images/scatter_hospital2020.png)
 
-Insert here 3 scatterplots!
+![scatter_hospital2021](images/scatter_hospital2021.png)
 
-**Question: Do you see any behavior?**
+**Can we see any behavior?**
 
-It is possible to note a smaller region during the pandemic. Also, the trips density decreased over the pandemic. For all three cases, trips were concentrated in Manhatan. 
+It is possible to note a smaller region during the pandemic (less trips). Also, the trips density decreased over the pandemic. For all three cases, trips were concentrated in Manhatan. There is no significant change in trips to hospitals. 
 
