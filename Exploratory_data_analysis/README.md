@@ -3,6 +3,13 @@
 
 The **goal of this project** is to learn how to do data exploration. In this case, data from **New York City Yellow Taxis** is used.
 
+## Data  
+
+!!Download the data from webpage:!!
+
+https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
+
+
 The following questions should guide the present work:
 
 ## How has covid affected the use of taxis in New York?
@@ -47,21 +54,16 @@ Learn from Data:
 - matplotlib
 - pyplot from matplotlib 
 
-#Use:
+### Use:
 %matplotlib inline to display the plots (closer to codes and clearer in the notebook)
 
-#Main learning: 
+### Main learning: 
 - How to extract, load and select data, also convert a .parquet file into a Data Frame 
 - Clear the data 
 - Post processing the data
 - Visualize data and get conclusions: barplot, scatterplot..
 - Work with pandas* data frames
 
-****Useful information: 
-
-!!Download the data from webpage:!!
-
-https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page
 
 ## 01. Data cleaning
 
@@ -105,11 +107,10 @@ Create a new dataset that contains all the information for the years: 2019, 2020
 ## 02. Visualizations (by years)
 
 **Has covid increased / decreased the number of trips made by taxis?**
-Lets use a barplot to answer this question. 
 
-Insert bar plot here!!
+![Barplot_yers](images/barplot_years.png)
 
-Yes, due to the pandemic, the low number of trips in 2020 was expected. In the next year, 2021, when the activities started again, there was a sligthly increase. \
+Yes, due to the pandemic, the low number of trips in 2020 was expected. In the next year, 2021, when the activities started again, there was a sligthly increase. 
 
 Visualize **how many passengers there are per taxi and per year (%)**.
 
